@@ -31,7 +31,7 @@ Configurar um host e adicionar a descoberta com os parametros:
 * Atualização = 300s
 * Período de retenção de itens perdidos = 0
 
-Os *protótipos de itens* serão do tipo *Agente Zabbix*, a chave terá que ser read[{#HOST},{#SECONDS}] para monitorar os segundos restantes para expiração do certificado. O restante dos parametros, fica ao seu critério.
+Os *protótipos de itens* serão do tipo *Agente Zabbix*, a chave terá que ser read[{#HOST},seconds] para monitorar os segundos restantes para expiração do certificado. O restante dos parametros, fica ao seu critério.
 
 É possível monitorar qualquer outro valor que tenha uma chave válida, para saber todas as chaves, olhar o arquivo */tmp/ssl_get.json*:
 
@@ -57,3 +57,5 @@ Exemplo:
             "{#SUBJECT_STATEORPROVINCENAME}": "California",
             "{#VERSION}": 3
 </pre>
+
+Obs. As chaves poderão ser em CAIXA ALTA ou em caixa baixa. O importante é colocar o nome da chave corretamente.
